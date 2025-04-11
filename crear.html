@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crear Contacto</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <main class="dashboard">
+    
+    <div class="dashboard-card">
+      <a href="index.html" class="btn-volver">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      
+      <h1><i class="fas fa-user-plus"></i> Agregar  Contacto</h1><br>
+      
+      <p>Completa los siguientes campos para guardar un nuevo contacto.</p>
+
+      <form action="php/guardar.php" method="POST" class="formulario">
+        <div class="campo">
+          <i class="fas fa-user"></i>
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
+        </div>
+
+        <div class="campo">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="campo">
+          <i class="fas fa-phone-alt"></i>
+          <input type="tel" name="telefono" placeholder="Teléfono" required>
+        </div>
+
+        <div class="campo">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" name="direccion" placeholder="Dirección" required>
+        </div>
+
+        <button type="submit" class="action-btn">
+          <i class="fas fa-save"></i> Guardar Contacto
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- MENSAJE FLOTANTE CENTRADO -->
+  <div class="mensaje-flotante" id="mensaje" >
+    <div class="mensaje-contenido">
+      <button class="cerrar-mensaje" onclick="cerrarMensaje()">×</button>
+      ¡Contacto guardado exitosamente!
+    </div>
+  </div>
+
+  <script src="js/mensaje.js"></script>
+</body>
+</html>
